@@ -9,6 +9,8 @@
     <div v-bind:style="{
       color: color
     }">Binding Styles</div>
+
+    <div :id="shorthand">Bind Shorthand</div>
   </div>
 </template>
 
@@ -23,7 +25,9 @@ export default {
       bindHeading: "heading",
 
       isRed: true,
-      color: "red"
+      color: "red",
+
+      shorthand: "shorthand"
     };
   }
 };
