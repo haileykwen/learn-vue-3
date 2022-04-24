@@ -2,6 +2,7 @@
   <div id="app">
     Hello {{ name }}
     <div v-text="age"></div>
+    <div v-html="showAlert"></div>
   </div>
 </template>
 
@@ -11,7 +12,8 @@ export default {
   data() {
     return {
       name: "harleykwen",
-      age: 22
+      age: 22,
+      showAlert: `<a href="#" onclick="alert('this is html binding')">Click here to show html binding</a>`
     };
   }
 };
