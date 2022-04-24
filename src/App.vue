@@ -4,6 +4,8 @@
     <div v-text="age"></div>
     <div v-html="showAlert"></div>
     <div v-bind:id="bindHeading">Heading</div>
+
+    <div v-bind:class="isRed && 'red'">Binding Classes</div>
   </div>
 </template>
 
@@ -15,7 +17,9 @@ export default {
       name: "harleykwen",
       age: 22,
       showAlert: `<a href="#" onclick="alert('this is html binding')">Click here to show html binding</a>`,
-      bindHeading: "heading"
+      bindHeading: "heading",
+
+      isRed: true
     };
   }
 };
@@ -33,5 +37,9 @@ export default {
 
 #heading {
   background-color: blue;
+}
+
+.red {
+  color: red;
 }
 </style>
