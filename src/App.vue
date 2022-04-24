@@ -6,6 +6,9 @@
     <div v-bind:id="bindHeading">Heading</div>
 
     <div v-bind:class="isRed && 'red'">Binding Classes</div>
+    <div v-bind:style="{
+      color: color
+    }">Binding Styles</div>
   </div>
 </template>
 
@@ -19,7 +22,8 @@ export default {
       showAlert: `<a href="#" onclick="alert('this is html binding')">Click here to show html binding</a>`,
       bindHeading: "heading",
 
-      isRed: true
+      isRed: true,
+      color: "red"
     };
   }
 };
